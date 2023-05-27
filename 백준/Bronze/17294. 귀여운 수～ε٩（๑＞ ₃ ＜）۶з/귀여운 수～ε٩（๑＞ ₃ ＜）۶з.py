@@ -23,15 +23,16 @@ for i in range(k_length):
 
 def is_cute_number(numList):
     if k_length == 1:
-        print("◝(⑅•ᴗ•⑅)◜..°♡ 뀌요미!!")
-        return
+        return True
 
     difference = numList[0] - numList[1]
     for i in range(1, k_length-1):
         if difference != numList[i] - numList[i+1]:
-            print("흥칫뿡!! <(￣ ﹌ ￣)>")
-            return
+            return False
         
-    print("◝(⑅•ᴗ•⑅)◜..°♡ 뀌요미!!")
+    return True
 
-is_cute_number(numList)
+if is_cute_number(numList):
+    print("◝(⑅•ᴗ•⑅)◜..°♡ 뀌요미!!")
+else:
+    print("흥칫뿡!! <(￣ ﹌ ￣)>")
